@@ -1,0 +1,41 @@
+<idea-plugin>
+  <id>com.haskkor.webstorm.plugin</id>
+  <name>webstorm-log-plugin</name>
+  <version>1.0</version>
+  <vendor email="haskkor@gmail.com" url="https://github.com/Haskkor/webstorm-log-plugin">Haskkor</vendor>
+
+  <!-- Enable plugin for all products -->
+  <depends>com.intellij.modules.lang</depends>
+  <!-- This enables the PSI capability for JavaScript -->
+  <depends>JavaScript</depends>
+
+  <description><![CDATA[
+      A plugin for JetBrains WebStorm to handle logs<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+      <action id="com.haskkor.webstorm.plugin.log" class="com.haskkor.webstorm.plugin.log" text="Add log in file"
+              description="Inject a console log in a file"/>
+  </actions>
+
+</idea-plugin>
