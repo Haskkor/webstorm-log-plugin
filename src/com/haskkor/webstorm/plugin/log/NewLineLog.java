@@ -73,6 +73,7 @@ public class NewLineLog extends AnAction {
         if (document.getText(new TextRange(offset, offset + 1)).equals(" ")) {
             return -1;
         }
+        CharSequence sequence = document.getCharsSequence();
         return 0;
     }
 }
