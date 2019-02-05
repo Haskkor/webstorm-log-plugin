@@ -6,8 +6,6 @@
 
   <!-- Enable plugin for all products -->
   <depends>com.intellij.modules.lang</depends>
-  <!-- This enables the PSI capability for JavaScript -->
-  <depends>JavaScript</depends>
 
   <description><![CDATA[
       A plugin for JetBrains WebStorm to handle logs<br>
@@ -34,11 +32,16 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="com.haskkor.webstorm.plugin.log.ConsoleLog" class="com.haskkor.webstorm.plugin.log.ConsoleLog"
-            text="Manage Console Log" description="Log handler for Webstorm"/>
     <action id="com.haskkor.webstorm.plugin.testlog.ConsoleLog" class="com.haskkor.webstorm.plugin.testlog.ConsoleLog"
             text="Console Log" description="Console log">
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta L" second-keystroke="shift ctrl meta L"/>
+    </action>
+    <action id="com.haskkor.webstorm.plugin.log.NewLineLog" class="com.haskkor.webstorm.plugin.log.NewLineLog"
+            text="New Line Log"
+            description="Shortcut to take the variable under the caret and create a new console.log line">
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt C"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt C"/>
     </action>
   </actions>
 
