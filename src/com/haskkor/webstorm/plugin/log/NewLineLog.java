@@ -9,7 +9,6 @@ import com.intellij.openapi.editor.CaretModel;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.util.TextRange;
 import com.intellij.openapi.vfs.VirtualFile;
 
 public class NewLineLog extends AnAction {
@@ -47,7 +46,7 @@ public class NewLineLog extends AnAction {
         );
 
         // Move the caret
-        caretModel.moveCaretRelatively(text.length(),1,  false, false, true);
+        caretModel.moveCaretRelatively(text.length(), 1, false, false, true);
     }
 
     private int getLineNumber(int offset) {
@@ -60,30 +59,65 @@ public class NewLineLog extends AnAction {
     }
 
     private String buildString(String fileName, int lineNumber, int offset) {
-        StringBuilder sb  = new StringBuilder("\n");
+        StringBuilder sb = new StringBuilder("\n");
         sb.append("console.log(\"");
         sb.append(fileName);
         sb.append(" l.");
-        sb.append(lineNumber + 1);
-        sb.append("\");");
+        sb.append(lineNumber + 2);
+        String word = findWordUnderCarret(offset);
+        if (word.length() > 0) {
+            sb.append("\", ");
+            sb.append(word);
+        } else {
+            sb.append("\"");
+        }
+        sb.append(");");
         return sb.toString();
     }
 
-    private int findWordStart(int offset) {
+    private String findWordUnderCarret(int offset) {
         CharSequence sequence = document.getCharsSequence();
-        if (sequence.charAt(offset).equals(" ")) {
-            return -1;
+        char firstLetter = sequence.charAt(offset);
+        if (!Character.isLetter(firstLetter) && !Character.isDigit(firstLetter)) {
+            return "";
         } else {
-
+            return sequence.subSequence(findWordStart(sequence, offset), findWordEnd(sequence, offset)).toString();
         }
-        return 0;
     }
 
-    private int findWordStart() {
-      for (int i = 0; i < s.length(); i++){
-    char c = s.charAt(i);        
-    //Process char
-}
+    private int findWordStart(CharSequence seq, int start) {
+        int val = start;
+        for (int i = start; i > 0; i--) {
+            char c = seq.charAt(i);
+            if (!Character.isLetter(c) && !Character.isDigit(c) && c != '_') {
+                val = i + 1;
+                break;
+            }
+            val = i - 1;
+        }
+        return val;
+    }
+
+    private int findWordEnd(CharSequence seq, int start) {
+        int val = start;
+        for (int i = start; i <= seq.length(); i++) {
+            char c = seq.charAt(i);
+            if (c == '(') {
+                for (int j = i; j <= seq.length(); j++) {
+                    char d = seq.charAt(j);
+                    if (d == ')') {
+                        val = j + 1;
+                        break;
+                    }
+                }
+                break;
+            }
+            if (!Character.isLetter(c) && !Character.isDigit(c) || c == ';') {
+                val = i;
+                break;
+            }
+        }
+        return val;
     }
 }
 
