@@ -78,5 +78,12 @@ public class NewLineLog extends AnAction {
         }
         return 0;
     }
+
+    private int findWordStart() {
+      for (int i = 0; i < s.length(); i++){
+    char c = s.charAt(i);        
+    //Process char
+}
+    }
 }
 
