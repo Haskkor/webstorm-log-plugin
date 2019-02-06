@@ -70,10 +70,12 @@ public class NewLineLog extends AnAction {
     }
 
     private int findWordStart(int offset) {
-        if (document.getText(new TextRange(offset, offset + 1)).equals(" ")) {
-            return -1;
-        }
         CharSequence sequence = document.getCharsSequence();
+        if (sequence.charAt(offset).equals(" ")) {
+            return -1;
+        } else {
+
+        }
         return 0;
     }
 }
