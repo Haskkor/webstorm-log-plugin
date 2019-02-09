@@ -11,6 +11,8 @@ public class LogUpdater {
 
     public void findConsoleLogs() {
         CharSequence sequence = document.getCharsSequence();
+        // function with a range finding for the first occurence of console.log(“aaaaaaaa l.0, update it and rescursive with a smaller range. 
+        // have to figure out how to change the text
         
     }
 }
