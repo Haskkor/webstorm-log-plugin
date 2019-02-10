@@ -66,6 +66,8 @@ public class NewLineLog extends AnAction {
         sb.append(lineNumber + 2);
         String word = findWordUnderCarret(offset);
         if (word.length() > 0) {
+            sb.append(": ");
+            sb.append(word);
             sb.append("\", ");
             sb.append(word);
         } else {
