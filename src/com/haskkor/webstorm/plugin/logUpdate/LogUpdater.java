@@ -1,17 +1,24 @@
 package com.haskkor.webstorm.plugin.logUpdate;
+import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Document;
+import com.intellij.openapi.project.Project;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class LogUpdater {
 
-    private final Document document;
+    private Document document;
+    private Project project;
     private int startIndex;
     private String regex;
 
-    public LogUpdater(Document document, int startIndex) {
+    public LogUpdater(Project project, Document document, int startIndex) {
+        this.project = project;
         this.document = document;
         this.startIndex = startIndex;
         // Find the console logs containing a line number
-        this.regex = "console\.log\((\"|\')[^\"\'\s]*\sl\.[0-9]+\s[^\"\']*(\"|\')[^\)]*\);?";
+        this.regex = "console.log((\"|\')[^\"\'\\s]*\\sl\\.[0-9]+\\s[^\"\']*(\"|\')[^\\)]*\\);?";
     }
 
     // public void updateConsoleLogs() {
@@ -19,9 +26,9 @@ public class LogUpdater {
         // have to figure out how to change the text
     // }
     
-    private void updateConsoleLogs() {
+    public void updateConsoleLogs() {
         // TextRange textRange = new TextRange(this.startIndex, this.document.getTextLength());
-        CharSequence text = this.document.getCharSequence();
+        CharSequence text = this.document.getCharsSequence();
         Pattern pattern = Pattern.compile(this.regex);
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {

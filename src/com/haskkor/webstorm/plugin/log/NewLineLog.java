@@ -1,5 +1,6 @@
 package com.haskkor.webstorm.plugin.log;
 
+import com.haskkor.webstorm.plugin.logUpdate.LogUpdater;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -47,6 +48,11 @@ public class NewLineLog extends AnAction {
 
         // Move the caret
         caretModel.moveCaretRelatively(text.length(), 1, false, false, true);
+
+        // Get new offset and update the other logs
+        int newCarretOffset = caretModel.getOffset();
+        LogUpdater logUpdater = new LogUpdater(project, document, newCarretOffset);
+        logUpdater.updateConsoleLogs();
     }
 
     private int getLineNumber(int offset) {
@@ -66,7 +72,7 @@ public class NewLineLog extends AnAction {
         sb.append(lineNumber + 2);
         String word = findWordUnderCarret(offset);
         if (word.length() > 0) {
-            sb.append(": ");
+            sb.append(" ");
             sb.append(word);
             sb.append("\", ");
             sb.append(word);
@@ -91,7 +97,7 @@ public class NewLineLog extends AnAction {
         int val = start;
         for (int i = start; i > 0; i--) {
             char c = seq.charAt(i);
-            if (!Character.isLetter(c) && !Character.isDigit(c) && c != '_') {
+            if (!Character.isLetter(c) && !Character.isDigit(c) && c != '_' && c != '.') {
                 val = i + 1;
                 break;
             }
@@ -114,7 +120,7 @@ public class NewLineLog extends AnAction {
                 }
                 break;
             }
-            if (!Character.isLetter(c) && !Character.isDigit(c) || c == ';') {
+            if (!Character.isLetter(c) && !Character.isDigit(c) && c != '.' || c == ';') {
                 val = i;
                 break;
             }
