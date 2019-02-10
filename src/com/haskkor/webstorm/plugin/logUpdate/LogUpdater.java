@@ -20,8 +20,8 @@ public class LogUpdater {
     // }
     
     private void updateConsoleLogs() {
-        TextRange textRange = new TextRange(this.startIndex, this.document.getTextLength());
-        String text = this.document.getText(textRange);
+        // TextRange textRange = new TextRange(this.startIndex, this.document.getTextLength());
+        CharSequence text = this.document.getCharSequence();
         Pattern pattern = Pattern.compile(this.regex);
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
