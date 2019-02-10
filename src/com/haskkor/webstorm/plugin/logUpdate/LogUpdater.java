@@ -36,3 +36,7 @@ public class LogUpdater {
 
 // https://github.com/JetBrains/intellij-community/blob/master/platform/core-api/src/com/intellij/openapi/editor/Document.java
 // https://github.com/JetBrains/intellij-community/blob/master/platform/util/src/com/intellij/openapi/util/TextRange.java
+
+// test this
+// extract string building functions in own class
+// use the line number
