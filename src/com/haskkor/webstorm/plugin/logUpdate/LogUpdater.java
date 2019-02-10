@@ -28,7 +28,7 @@ public class LogUpdater {
             int offsetStart = matcher.start();
             int offsetEnd = matcher.end();
             WriteCommandAction.runWriteCommandAction(project, () ->
-                document.replaceString(offsetStart, offsetEnd, "")
+                document.replaceString(offsetStart, offsetEnd, "test replace")
             );
         }
     }
