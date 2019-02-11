@@ -41,6 +41,8 @@ public class LogUpdater {
     }
 }
 
+// https://intellij-support.jetbrains.com/hc/en-us/community/posts/206262599-Trying-to-force-a-code-reformat
+
 // https://github.com/JetBrains/intellij-community/blob/master/platform/core-api/src/com/intellij/openapi/editor/Document.java
 // https://github.com/JetBrains/intellij-community/blob/master/platform/util/src/com/intellij/openapi/util/TextRange.java
 
