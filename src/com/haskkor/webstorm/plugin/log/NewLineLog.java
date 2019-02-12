@@ -108,7 +108,7 @@ public class NewLineLog extends AnAction {
 
     private int findWordEnd(CharSequence seq, int start) {
         int val = start;
-        for (int i = start; i <= seq.length(); i++) {
+        for (int i = start; i <= seq.length() - 1; i++) {
             char c = seq.charAt(i);
             if (c == '(') {
                 for (int j = i; j <= seq.length(); j++) {
