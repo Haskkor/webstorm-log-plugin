@@ -32,12 +32,14 @@ public class LogUpdater {
         // TextRange textRange = new TextRange(this.startIndex, this.document.getTextLength());
         CharSequence text = this.document.getCharsSequence();
         Matcher matcher = this.pattern.matcher(text);
-        while (matcher.find()) {
+        int position = this.startIndex;
+        while (matcher.find(position)) {
             int offsetStart = matcher.start();
             int offsetEnd = matcher.end();
             WriteCommandAction.runWriteCommandAction(project, () ->
                     document.replaceString(offsetStart, offsetEnd, "test replace")
             );
+            position++;
         }
     }
 }
