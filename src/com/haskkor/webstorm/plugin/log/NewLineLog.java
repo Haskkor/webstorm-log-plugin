@@ -51,7 +51,7 @@ public class NewLineLog extends AnAction {
 
         // Get new offset and update the other logs
         int newCarretOffset = caretModel.getOffset();
-        LogUpdater logUpdater = new LogUpdater(project, document, newCarretOffset);
+        LogUpdater logUpdater = new LogUpdater(project, document, fileName, newCarretOffset);
         logUpdater.updateConsoleLogs();
     }
 

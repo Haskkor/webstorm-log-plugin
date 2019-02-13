@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c087a963-1e1a-479b-a599-f3ae6bce9c5a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webstorm-log-plugin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/webstorm-log-plugin.jar" afterDir="false" />
@@ -34,8 +33,8 @@
           <file leaf-file-name="LogUpdater.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="41" selection-start-line="41" selection-end-line="41" />
+                <state relative-caret-position="675">
+                  <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -59,8 +58,8 @@
           <file leaf-file-name="NewLineLog.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+                <state relative-caret-position="759">
+                  <caret line="67" selection-start-line="67" selection-end-line="67" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -117,8 +116,8 @@
         <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/testlog/ConsoleLog.java" />
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" />
         <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" />
+        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" />
       </list>
     </option>
   </component>
@@ -343,12 +342,12 @@
       <workItem from="1549506694337" duration="1309000" />
       <workItem from="1549826484482" duration="1470000" />
       <workItem from="1549999123325" duration="2975000" />
-      <workItem from="1550085915716" duration="503000" />
+      <workItem from="1550085915716" duration="2430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22035000" />
+    <option name="totallyTimeSpent" value="23962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
@@ -739,20 +738,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="759">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="97" column="32" selection-start-line="97" selection-start-column="32" selection-end-line="97" selection-end-column="32" />
+        <state relative-caret-position="675">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
