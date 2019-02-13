@@ -95,7 +95,7 @@ public class NewLineLog extends AnAction {
 
     private int findWordStart(CharSequence seq, int start) {
         int val = start;
-        for (int i = start; i > 0; i--) {
+        for (int i = start; i > 1; i--) {
             char c = seq.charAt(i);
             if (!Character.isLetter(c) && !Character.isDigit(c) && c != '_' && c != '.') {
                 val = i + 1;

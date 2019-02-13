@@ -12,7 +12,6 @@ public class LogUpdater {
     private Document document;
     private Project project;
     private int startIndex;
-//    private String regex;
     private Pattern pattern;
 
     public LogUpdater(Project project, Document document, int startIndex) {
@@ -23,13 +22,7 @@ public class LogUpdater {
         this.pattern = Pattern.compile("console.log\\([\"|'][^\"'\\s]*\\sl\\.[0-9]+(\\s[^\"']*)?[\"|'][^)]*\\);?");
     }
 
-    // public void updateConsoleLogs() {
-    // function with a range finding for the first occurence of console.log(“aaaaaaaa l.0, update it and rescursive with a smaller range.
-    // have to figure out how to change the text
-    // }
-
     public void updateConsoleLogs() {
-        // TextRange textRange = new TextRange(this.startIndex, this.document.getTextLength());
         CharSequence text = this.document.getCharsSequence();
         Matcher matcher = this.pattern.matcher(text);
         int position = this.startIndex;
@@ -45,9 +38,5 @@ public class LogUpdater {
 }
 
 
-// test this
-    // skip some lines
-// Start from the start of the document
 // make a real text replace
 // extract string building functions in own class
-
