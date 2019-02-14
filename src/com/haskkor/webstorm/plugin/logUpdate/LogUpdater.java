@@ -1,9 +1,10 @@
 package com.haskkor.webstorm.plugin.logUpdate;
 
-import com.intellij.openapi.command.WriteCommandAction;
+import com.haskkor.webstorm.plugin.documentHandler.DocumentHandler;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.TextRange;
+import com.intellij.openapi.actionSystem.AnActionEvent;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,13 +15,13 @@ public class LogUpdater {
     private Project project;
     private int startIndex;
     private Pattern patternLog;
-    private String fileName;
+    private DocumentHandler documentHandler;
 
-    public LogUpdater(Project project, Document document, String fileName, int startIndex) {
+    public LogUpdater(Project project, Document document, int startIndex, AnActionEvent anActionEvent) {
         this.project = project;
         this.document = document;
         this.startIndex = startIndex;
-        this.fileName = fileName;
+        this.documentHandler = new DocumentHandler(this.project, this.document, anActionEvent);
         // Find the console logs containing a line number
         this.patternLog = Pattern.compile("console.log\\([\"|'][^\"'\\s]*\\sl\\.[0-9]+(\\s[^\"']*)?[\"|'][^)]*\\);?");
     }
@@ -32,22 +33,16 @@ public class LogUpdater {
         while (matcher.find(position)) {
             int offsetStart = matcher.start();
             int offsetEnd = matcher.end();
-            WriteCommandAction.runWriteCommandAction(project, () ->
-                    document.replaceString(offsetStart, offsetEnd,
-                            buildStringReplace(document.getText(new TextRange(offsetStart, offsetEnd))))
-            );
+            documentHandler.replaceText(offsetStart, offsetEnd,
+                    buildStringReplace(document.getText(new TextRange(offsetStart, offsetEnd)), offsetStart));
             position++;
         }
     }
 
-    private String buildStringReplace(String text) {
-        Pattern ptn = Pattern.compile("console.log\\([\"|'][^\"'\\s]*\\s");
+    private String buildStringReplace(String text, int offset) {
+        Pattern ptn = Pattern.compile("console.log\\([\"|'][^\"'\\s]*\\sl\\.[0-9]+");
         Matcher matcher = ptn.matcher(text);
-        String replace = "console.log(\'" + this.fileName + " ";
+        String replace = "console.log(\'" + this.documentHandler.getFileName() + " l." + (this.document.getLineNumber(offset) + 1);
         return matcher.replaceFirst(replace);
     }
 }
-
-
-// make a real text replace
-// extract string building functions in own class

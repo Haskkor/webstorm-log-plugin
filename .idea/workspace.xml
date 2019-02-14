@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c087a963-1e1a-479b-a599-f3ae6bce9c5a" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/documentHandler/DocumentHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logFormat/LogFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/webstorm-log-plugin/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/webstorm-log-plugin/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/testlog/ConsoleLog.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/webstorm-log-plugin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/webstorm-log-plugin.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -15,26 +22,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45426983">
+    <splitter split-orientation="horizontal" split-proportion="0.45265824">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="225">
-                    <caret line="15" selection-start-line="15" selection-end-line="15" />
+                  <first_editor relative-caret-position="150">
+                    <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
                   </first_editor>
                   <second_editor />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LogUpdater.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
+          <file leaf-file-name="LogFormatter.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logFormat/LogFormatter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+                <state relative-caret-position="60">
+                  <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DocumentHandler.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/documentHandler/DocumentHandler.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -58,8 +74,20 @@
           <file leaf-file-name="NewLineLog.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="759">
-                  <caret line="67" selection-start-line="67" selection-end-line="67" />
+                <state relative-caret-position="208">
+                  <caret line="38" selection-start-line="38" selection-end-line="38" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="LogUpdater.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -72,18 +100,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
                   <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConsoleLog.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/testlog/ConsoleLog.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -115,9 +131,13 @@
         <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/ConsoleLog.java" />
         <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/testlog/ConsoleLog.java" />
         <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logFormat/LogUpdater.java" />
+        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logFormat/LogFormatter.java" />
+        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/documentHandler/NewLineLog.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" />
+        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/documentHandler/DocumentHandler.java" />
         <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java" />
+        <option value="$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java" />
       </list>
     </option>
   </component>
@@ -153,9 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,7 +208,21 @@
               <item name="webstorm-log-plugin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="documentHandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstorm-log-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webstorm-log-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
               <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webstorm-log-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webstorm-log-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="logFormat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="webstorm-log-plugin" type="b2602c69:ProjectViewProjectNode" />
@@ -199,25 +231,12 @@
               <item name="plugin" type="462c0819:PsiDirectoryNode" />
               <item name="logUpdate" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="webstorm-log-plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webstorm-log-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="testlog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="webstorm-log-plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webstorm-log-plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="plugin" type="462c0819:PsiDirectoryNode" />
-              <item name="testlog" type="462c0819:PsiDirectoryNode" />
-              <item name="ConsoleLog.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,6 +249,12 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.haskkor.webstorm.plugin.documentHandler" />
+      <recent name="com.haskkor.webstorm.plugin.logFormat" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -342,12 +367,13 @@
       <workItem from="1549506694337" duration="1309000" />
       <workItem from="1549826484482" duration="1470000" />
       <workItem from="1549999123325" duration="2975000" />
-      <workItem from="1550085915716" duration="2430000" />
+      <workItem from="1550085915716" duration="2527000" />
+      <workItem from="1550172061929" duration="2283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23962000" />
+    <option name="totallyTimeSpent" value="26342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
@@ -368,7 +394,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21405877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21564734" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -728,30 +754,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logFormat/LogFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="225">
-            <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="345">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/logUpdate/LogUpdater.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/log/NewLineLog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        <state relative-caret-position="208">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/haskkor/webstorm/plugin/documentHandler/DocumentHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
