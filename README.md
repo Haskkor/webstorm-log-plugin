@@ -14,3 +14,21 @@ A plugin for JetBrains WebStorm to handle logs
 * Right click on folder/file to remove all console logs
 * Comment/uncomment all logs in folder/file
 * Config option to change the log shape and the shortcuts
+
+
+https://github.com/JetBrains/intellij-community/blob/master/platform/editor-ui-api/src/com/intellij/openapi/ide/CopyPasteManager.java
+
+public static String getClipboard(){
+  Transferable t=Toolkit.getDefaultToolkit().getSystemClipboard().getContents(null);
+  try {
+    if (t != null && t.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+      String text=(String)t.getTransferData(DataFlavor.stringFlavor);
+      return text;
+    }
+  }
+ catch (  UnsupportedFlavorException e) {
+  }
+catch (  IOException e) {
+  }
+  return "";
+}
