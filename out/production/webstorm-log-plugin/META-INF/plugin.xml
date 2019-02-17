@@ -32,16 +32,19 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="com.haskkor.webstorm.plugin.testlog.ConsoleLog" class="com.haskkor.webstorm.plugin.testlog.ConsoleLog"
-            text="Console Log" description="Console log">
-      <keyboard-shortcut keymap="$default" first-keystroke="ctrl meta L" second-keystroke="shift ctrl meta L"/>
-    </action>
     <action id="com.haskkor.webstorm.plugin.log.NewLineLog" class="com.haskkor.webstorm.plugin.log.NewLineLog"
             text="New Line Log"
             description="Shortcut to take the variable under the caret and create a new console.log line">
       <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt C"/>
       <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt C"/>
       <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt C"/>
+    </action>
+    <action id="com.haskkor.webstorm.plugin.log.ClipboardLog" class="com.haskkor.webstorm.plugin.log.ClipboardLog"
+            text="Clipboard Log"
+            description="Shortcut to create a console log line with the clipboard content">
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt V"/>
+      <keyboard-shortcut keymap="Mac OS X" first-keystroke="ctrl alt V"/>
+      <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="ctrl alt V"/>
     </action>
   </actions>
 

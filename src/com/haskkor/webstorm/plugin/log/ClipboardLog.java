@@ -1,11 +1,27 @@
 package com.haskkor.webstorm.plugin.log;
 
+import com.haskkor.webstorm.plugin.documentHandler.DocumentHandler;
 import com.haskkor.webstorm.plugin.logFormat.LogFormatter;
+import com.haskkor.webstorm.plugin.logUpdate.LogUpdater;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.CommonDataKeys;
+import com.intellij.openapi.ide.CopyPasteManager;
+import com.intellij.openapi.editor.Document;
+import com.intellij.openapi.editor.Editor;
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.editor.CaretModel;
+
+import java.awt.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
 
 public class ClipboardLog extends AnAction {
 
     private CopyPasteManager copyPasteManager;
-    public LogFormatter logFormatter;
+    private LogFormatter logFormatter;
     private Project project;
     private Editor editor;
     private Document document;
@@ -14,7 +30,7 @@ public class ClipboardLog extends AnAction {
 
     @Override
     public void actionPerformed(AnActionEvent e) {
-        this.copyPasteManager = new CopyPasteManager();
+        this.copyPasteManager = CopyPasteManager.getInstance();
         this.logFormatter = new LogFormatter();
         this.project = e.getProject();
         this.editor = e.getData(CommonDataKeys.EDITOR);
@@ -52,8 +68,12 @@ public class ClipboardLog extends AnAction {
 
     private String getClipboardContent(){
         Transferable t = this.copyPasteManager.getContents();
-        if (t != null && t.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-            return (String) t.getTransferData(DataFlavor.stringFlavor);
+        try {
+            if (t != null && t.isDataFlavorSupported(DataFlavor.stringFlavor)) {
+                return (String) t.getTransferData(DataFlavor.stringFlavor);
+            }
+        } catch (HeadlessException | UnsupportedFlavorException | IOException e) {
+            e.printStackTrace();
         }
         return "";
     }

@@ -9,7 +9,7 @@ A plugin for JetBrains WebStorm to handle logs
     * ~~Change the log to take the '.' (e.g: log this.props.test instead of test)~~
     * ~~See todos in the LogUpdate.java file~~
 * ~~Clean classes~~
-* Shortcut to create a log with the content of the clipboard
+* ~~Shortcut to create a log with the content of the clipboard~~
 * Right click on folder/file to update all logs
 * Right click on folder/file to remove all console logs
 * Comment/uncomment all logs in folder/file
