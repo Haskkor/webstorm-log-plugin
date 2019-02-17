@@ -1,7 +1,17 @@
 # webstorm-log-plugin
-A plugin for JetBrains WebStorm to handle logs
 
-_A 'console.log' plugin for WebStorm_
+_A 'console.log' plugin for JetBrains WebStorm_
+
+## Installation
+
+First solution - Download it from JetBrains: [webstorm-log-plugin](https://plugins.jetbrains.com/plugin/11989-webstorm-log-plugin)
+
+Second solution -
+* Download `webstorm-log-plugin.jar`
+* In the plugins section of the preferences of WebStorm, choose 'Install from disk' and select `webstorm-log-plugin.jar`.
+* Restart IDE
+
+![alt text](https://user-images.githubusercontent.com/10620919/52919951-9c1ad700-336c-11e9-950f-43e1dd9179db.png)
 
 ## Usage
 
