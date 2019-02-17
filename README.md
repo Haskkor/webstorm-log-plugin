@@ -1,20 +1,22 @@
 # webstorm-log-plugin
 A plugin for JetBrains WebStorm to handle logs
 
-## Functionality
+_A 'console.log' plugin for WebStorm_
 
-* ~~Log contains variable name, file name, line number~~
-* ~~Cursor on variable name and shortcut to create log on next line~~
-* ~~Update console logs in file when creating a new one~~
-    * ~~Change the log to take the '.' (e.g: log this.props.test instead of test)~~
-    * ~~See todos in the LogUpdate.java file~~
-* ~~Clean classes~~
-* ~~Shortcut to create a log with the content of the clipboard~~
-* Right click on folder/file to update all logs
+## Usage
+
+## Demo
+
+## Improvements ideas
+
 * Right click on folder/file to remove all console logs
 * Comment/uncomment all logs in folder/file
 * Config option to change the log shape and the shortcuts
 
+## [Changelog](https://github.com/Haskkor/webstorm-log-plugin/blob/master/CHANGELOG.md)
 
-https://github.com/JetBrains/intellij-community/blob/master/platform/editor-ui-api/src/com/intellij/openapi/ide/CopyPasteManager.java
+## Contributing
 
+Pull requests are welcome.
+
+## [License](https://github.com/Haskkor/webstorm-log-plugin/blob/master/LICENSE)
