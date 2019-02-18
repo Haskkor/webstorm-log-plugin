@@ -1,37 +1,25 @@
 <idea-plugin>
+
   <id>com.haskkor.webstorm.plugin</id>
+
   <name>webstorm-log-plugin</name>
+
   <version>1.0</version>
+
   <vendor email="haskkor@gmail.com" url="https://github.com/Haskkor/webstorm-log-plugin">Haskkor</vendor>
 
-  <!-- Enable plugin for all products -->
   <depends>com.intellij.modules.lang</depends>
 
-  <description><![CDATA[
-      A plugin for JetBrains WebStorm to handle logs<br>
-    ]]></description>
+  <description>A plugin for JetBrains WebStorm to handle logs</description>
 
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
-  </change-notes>
+  <change-notes>See: https://github.com/Haskkor/webstorm-log-plugin/blob/master/CHANGELOG.md</change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
   <idea-version since-build="173.0"/>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
-
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
   </extensions>
 
   <actions>
-    <!-- Add your actions here -->
     <action id="com.haskkor.webstorm.plugin.log.NewLineLog" class="com.haskkor.webstorm.plugin.log.NewLineLog"
             text="New Line Log"
             description="Shortcut to take the variable under the caret and create a new console.log line">
